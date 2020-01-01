@@ -8,4 +8,12 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="DayDoAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:background">@color/colorWhite</item>
+        <item name="android:textColor">@color/colorBlueDark</item>
+        <item name="colorPrimary">@color/colorWhite</item>
+        <item name="colorPrimaryDark">@color/colorNotification</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:fontFamily">@font/quicksand_semi_bold</item>
+    </style>
 </resources>

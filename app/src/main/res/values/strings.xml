@@ -1,7 +1,11 @@
 <resources>
-    <string name="app_name">DayDoUI</string>
+    <string name="app_name">Simply Task</string>
     <string name="khmer">Khmer</string>
     <string name="english">English</string>
     <string name="about">About</string>
     <string name="more">More</string>
+    <string name="notification">Notification</string>
+    <string name="home">Home</string>
+    <string name="routine">Routine</string>
+    <string name="profile">Profile</string>
 </resources>
