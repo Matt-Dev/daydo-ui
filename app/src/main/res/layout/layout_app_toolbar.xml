@@ -14,6 +14,6 @@
         android:text="@string/app_name"
         android:gravity="center"
         android:fontFamily="@font/quicksand_bold"
-        android:textSize="@dimen/appTitle"
+        android:textSize="@dimen/sizeTitle"
         android:textColor="@color/colorOrange"/>
 </androidx.appcompat.widget.Toolbar>
