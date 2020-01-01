@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:id="@+id/more"
+        android:icon="@drawable/ic_more_vert"
+        android:title="@string/more"
+        app:showAsAction="ifRoom">
+        <menu>
+            <item
+                android:id="@+id/khmer"
+                android:title="@string/khmer"
+                android:icon="@mipmap/ic_kh"
+                app:showAsAction="never"/>
+
+            <item android:id="@+id/english"
+                android:title="@string/english"
+                android:icon="@mipmap/ic_en"
+                app:showAsAction="never"/>
+
+            <item android:id="@+id/about"
+                android:title="@string/about"
+                android:icon="@mipmap/ic_info"
+                app:showAsAction="never"/>
+        </menu>
+    </item>
+</menu>
