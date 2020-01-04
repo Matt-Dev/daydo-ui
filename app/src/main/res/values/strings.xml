@@ -8,4 +8,6 @@
     <string name="home">Home</string>
     <string name="routine">Routine</string>
     <string name="profile">Profile</string>
+    <string name="setting">Setting</string>
+    <string name="share_tab">share tab</string>
 </resources>

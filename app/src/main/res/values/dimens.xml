@@ -3,4 +3,5 @@
     <dimen name="sizeTitle">20sp</dimen>
     <dimen name="sizeParagraph">14sp</dimen>
     <dimen name="sizeInputText">16sp</dimen>
+    <dimen name="appBar">48dp</dimen>
 </resources>

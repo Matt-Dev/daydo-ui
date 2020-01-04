@@ -16,8 +16,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setTitleTextColor(getColor(R.color.colorBlueDark));
-        toolbar.setLogo(R.drawable.ic_menu);
         setSupportActionBar(toolbar);
 
         toolbar.setOnClickListener(new View.OnClickListener() {
@@ -31,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.menu_language,menu);
+        inflater.inflate(R.menu.menu_notification,menu);
         return super.onCreateOptionsMenu(menu);
     }
 }
