@@ -1,40 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout
+<androidx.appcompat.widget.Toolbar
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/toolbar"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    android:layout_height="wrap_content"
+    android:background="@color/colorWhite"
+    android:minHeight="?attr/actionBarSize"
+    android:theme="@style/DayDoAppTheme.Toolbar"
+    android:elevation="4dp">
+    <ImageView
+        android:id="@+id/share_tab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_menu"
+        android:gravity="start"
+        android:layout_gravity="center_vertical"
+        android:contentDescription="@string/share_tab"/>
+    <TextView
+        android:id="@+id/toolbar_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorWhite"
-        android:minHeight="?attr/actionBarSize"
-        android:theme="@style/DayDoAppTheme.Toolbar"
-        android:elevation="4dp">
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+        android:text="@string/app_name"
+        android:gravity="center"
+        android:layout_gravity="center_vertical"
+        android:fontFamily="@font/quicksand_bold"
+        android:textSize="@dimen/sizeTitle"
+        android:textColor="@color/colorOrange"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="@string/app_name"
-                android:gravity="center"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="@font/quicksand_bold"
-                android:textSize="@dimen/sizeTitle"
-                android:textColor="@color/colorOrange"/>
-
-            <ImageView
-                android:id="@+id/share_tab"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:src="@drawable/ic_menu"
-                android:gravity="center"
-                android:layout_gravity="center_vertical"
-                android:background="?attr/actionBarItemBackground"
-                android:contentDescription="@string/share_tab"/>
-        </FrameLayout>
-    </androidx.appcompat.widget.Toolbar>
-</com.google.android.material.appbar.AppBarLayout>
+</androidx.appcompat.widget.Toolbar>
