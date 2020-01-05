@@ -15,6 +15,7 @@
         android:layout_height="wrap_content"
         android:src="@drawable/ic_menu"
         android:gravity="start"
+        android:foreground="?android:attr/selectableItemBackground"
         android:layout_gravity="center_vertical"
         android:contentDescription="@string/share_tab"/>
     <TextView
