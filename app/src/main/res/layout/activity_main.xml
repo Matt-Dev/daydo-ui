@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,42 +8,94 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <include
-        layout="@layout/layout_app_toolbar"
+    <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="@dimen/appBar"/>
+        android:layout_height="?attr/actionBarSize">
 
-    <LinearLayout
+        <!-- Action bar-->
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorWhite"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/DayDoAppTheme.Toolbar">
+            <ImageView
+                android:id="@+id/share_tab"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_menu"
+                android:gravity="start"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/share_tab"/>
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/app_name"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="@font/quicksand_bold"
+                android:textSize="@dimen/sizeTitle"
+                android:textColor="@color/colorOrange"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- Place content here-->
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="0dip"
-        android:layout_weight="1"
-        android:background="@color/colorOrange"
-        android:gravity="center|bottom"
-        android:orientation="vertical">
-
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="top"
-            android:gravity="top"
             android:orientation="vertical">
             <ImageView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="400dp"
+                android:layout_height="400dp"
+                android:layout_marginTop="50dp"
                 android:src="@drawable/no_task"
-                android:background="@color/colorWhite"/>
+                android:scaleType="centerCrop"
+                android:layout_gravity="center"
+                android:contentDescription="@string/placeholder" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/no_to_do_list"
+                android:gravity="center"
+                android:textSize="@dimen/titleSize"
+                android:padding="@dimen/space_15dp"
+                android:textColor="@color/colorBlueDark"/>
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/make_some"
+                android:backgroundTint="@color/colorOrange"
+                android:textColor="@color/colorWhite"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginStart="@dimen/space_15dp"
+                android:layout_marginEnd="@dimen/space_15dp"
+                android:textSize="@dimen/titleSize"
+                android:fontFamily="@font/quicksand_semi_bold"
+                app:cornerRadius="10dp"
+                android:letterSpacing="0"/>
 
         </LinearLayout>
+    </ScrollView>
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottom_navigation"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/appBar"
-            android:layout_gravity="bottom"
-            android:background="@color/colorWhite"
-            app:itemIconTint="@drawable/bottom_navigation_view_selector"
-            app:itemTextColor="@drawable/bottom_navigation_view_selector"
-            app:labelVisibilityMode="unlabeled"
-            app:menu="@menu/menu_navigation_bar" />
-    </LinearLayout>
-</LinearLayout>
+    <!-- Navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/appBar"
+        android:layout_gravity="bottom"
+        app:layout_insetEdge="bottom"
+        android:background="@color/colorWhite"
+        app:itemIconTint="@drawable/bottom_navigation_view_selector"
+        app:itemTextColor="@drawable/bottom_navigation_view_selector"
+        app:labelVisibilityMode="unlabeled"
+        app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+        app:menu="@menu/menu_navigation_bar" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
